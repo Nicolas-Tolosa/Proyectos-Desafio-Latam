@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
+    <div class="min-">
         <p>© 2021 - Pizzería Mamma Mia! - Todos los derechos reservados</p>
     </div>
   )
