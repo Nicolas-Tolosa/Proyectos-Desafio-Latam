@@ -6,7 +6,8 @@ const Home = () => {
   return (
     <div>
       <Header></Header>
-      <div class="grid sm:grid-cols-1 gap-1 gap-">
+      {/*
+      /*<div class="grid sm:grid-cols-1 gap-1 gap-">
         <CardPizza
           name="Napolitana"
           price={5950}
@@ -34,6 +35,8 @@ const Home = () => {
           img="https://cdn.papajohns.cl/pictures/pizzas/lacordillerana_1691158882.jpg"
         />
       </div>
+
+      */}
       
 
 
