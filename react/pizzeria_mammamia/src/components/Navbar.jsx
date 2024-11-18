@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <div className="flex justify-between bg-slate-900 items-center px-2 py-3">
 
-            <div className="flex items-center space-x-3 text-white">
+            <div className="flex items-center space-x-3 text-white ml-6">
                 <div className="flex items-center">
                     <a href="#home" className="flex items-center space-x-1">
                         <CiPizza className="text-xs md:text-lg lg:text-lg xl:text-base 2xl:text-base" />
@@ -47,7 +47,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className="flex items-center space-x-3 text-white">
+            <div className="flex items-center space-x-3 text-white mr-6">
                 <a href="#cart" className="flex items-center space-x-1">
                     <FaCartShopping className="text-xs md:text-lg lg:text-lg xl:text-base 2xl:text-base" />
                     <p className="text-xs md:text-lg lg:text-lg xl:text-base 2xl:text-base" >Total:</p>
