@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../pages/components/Header'
 import CardPizza from '../components/CardPizza'
-import Footer from '../components/Footer'
 
 const Home = () => {
   return (
