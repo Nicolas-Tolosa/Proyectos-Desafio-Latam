@@ -1,38 +1,41 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'; // Importa Link de React Router
 
 const Footer = () => {
   return (
     <div>
-
       <div className="bg-slate-900 h-auto grid-cols-1 grid md-grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 pt-6 justify-center pb-6">
         <div className="ml-12 flex items-center mb-6">
           <img src="/logo.jpg" alt="" className="rounded-full h-20"/>
         </div>
 
         <div className="flex flex-col mx-6 text-white mb-4">
-          <h2 className="font-bold">MAMMA MÍA
-          </h2>
-          <a href="#" className="hover:underline">Acerca de nosotros</a>
-          <a href="#" className="hover:underline">Ingredientes</a>
-          <a href="#" className="hover:underline">Mamma Mía SpA</a>
-          <a href="#" className="hover:underline">Pizzas</a>
+          <h2 className="font-bold">MAMMA MÍA</h2>
+          {/* Reemplazar <a> por <Link> */}
+          <Link to="#" className="hover:underline">Acerca de nosotros</Link>
+          <Link to="#" className="hover:underline">Ingredientes</Link>
+          <Link to="#" className="hover:underline">Mamma Mía SpA</Link>
+          <Link to="#" className="hover:underline">Pizzas</Link>
         </div>
+        
         <div className="flex flex-col mx-6 text-white mb-4">
           <h2 className="font-bold">AYUDA</h2>
-          <a href="#" className="hover:underline">Preguntas frecuentes</a>
-          <a href="#" className="hover:underline">Contacto</a>
-          <a href="#" className="hover:underline">Pide por teléfono 666 666 6666</a>
+          <Link to="#" className="hover:underline">Preguntas frecuentes</Link>
+          <Link to="#" className="hover:underline">Contacto</Link>
+          <a href="tel:6666666666" className="hover:underline">Pide por teléfono 666 666 6666</a>
         </div>
+        
         <div className="flex flex-col mx-6 text-white mb-4">
           <h2 className="font-bold">LEGAL</h2>
-          <a href="#" className="hover:underline">Términos y condiciones</a>
-          <a href="#" className="hover:underline">Política de privacidad</a>
-          <a href="#" className="hover:underline">Codigo Ético</a>
-          <a href="#" className="hover:underline">Canal Ético</a>
+          <Link to="#" className="hover:underline">Términos y condiciones</Link>
+          <Link to="#" className="hover:underline">Política de privacidad</Link>
+          <Link to="#" className="hover:underline">Código Ético</Link>
+          <Link to="#" className="hover:underline">Canal Ético</Link>
         </div>
+        
         <div className="flex flex-col mx-6 text-white mb-4">
           <h2 className="font-bold">LOCALES</h2>
-          <a href="#" className="hover:underline">Nuestros locales</a>
+          <Link to="#" className="hover:underline">Nuestros locales</Link>
         </div>
 
       </div>
@@ -41,7 +44,7 @@ const Footer = () => {
         <p className="text-white text-xs">© 2024 - Pizzería Mamma Mia! - Todos los derechos reservados</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,20 +1,14 @@
-import { useState } from 'react';
 import './App.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
+import AppRoutes from "./routes/AppRoutes";
 
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <div className="mx-auto">
-      <Navbar></Navbar>
-      <Home></Home>
-      <Footer></Footer>
-    </div>
-  )
+    <>
+      <AppRoutes />
+    </>
+
+  ) 
 }
 
 export default App
