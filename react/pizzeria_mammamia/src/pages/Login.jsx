@@ -1,26 +1,43 @@
-import { useState } from 'react'
-const Login = () => {
-    const [ username, setUsername ] = useState("")
-    const [ password, setPassword ] = useState("")
-    const [ error, setError ] = useState(false)
-    const inputValidate = (e) => {
-        e.preventDefault()
+import { useState } from "react"
+import { MdError } from "react-icons/md";
 
-        if(username === ""){
-            setError(true)
+const Login = () => {
+
+    const [ loginUser, setLoginUser ] = useState("")
+    const [ loginPassword, setLoginPassword ] = useState("")
+    const [ loginError, setLoginError ] = useState(false)
+    const [ isLoged, setIsLoged ] = useState(false)
+
+
+    const handleLogin = (e) => {
+        e.preventDefault()
+        if (loginUser.trim() === '' || loginPassword.trim() === '') {
+            setLoginError(true)
+            setIsLoged(false)
             return
         }
-        setError(false)
+        setLoginError(false)
+        setIsLoged(true)
+
     }
+
     return (
-        <form onSubmit={inputValidate} className="max-w-sm mx-auto grid grid-cols-1 mt-10">
+        <form className="max-w-sm mx-auto grid grid-cols-1 mt-10" onSubmit={handleLogin} >
             <div className="mb-5">
-                <label htmlFor="username" className="block mb-2 text-sm md:text-base font-bold text-black">Tu usuario</label>
-                <input type="text" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-slate-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Usuario" required onChange={(e) => setUsername(e.target.value)}/>
+                {loginError && <p className="p-4 text-white bg-red-600 font-bold text-sm md:text-base rounded-lg flex items-center justify-center my-3"><MdError className="mr-2" size="20"/> Introduce un email y contraseña validos</p>}
+                {isLoged && <p className="p-4 text-white bg-green-600 font-bold text-sm md:text-base rounded-lg flex items-center justify-center my-3">¡Has ingresado con éxito!</p>}
+                <label htmlFor="email" className="block mb-2 text-sm md:text-base font-bold text-black">Tu email</label>
+                <input type="email" id="email" className="bg-slate-900 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="pizzeria@mammamia.com" required 
+                
+                onChange={(e) => setLoginUser(e.target.value)}
+                />
             </div>
             <div className="mb-5">
                 <label htmlFor="password" className="block mb-2 text-sm md:text-base font-bold text-black">Tu contraseña</label>
-                <input type="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-slate-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Contraseña" required />
+                <input type="password" id="password" className="bg-slate-900 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Contraseña" required minLength={6}
+                
+                onChange={(e) => setLoginPassword(e.target.value)}
+                />
             </div>
             <div className="flex items-start mb-5">
                 <div className="flex items-center h-5">
