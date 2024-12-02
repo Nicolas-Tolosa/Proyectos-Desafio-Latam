@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div className="bg-slate-900 h-auto grid-cols-1 grid md-grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 pt-6 justify-center pb-6">
         <div className="ml-12 flex items-center mb-6">
-          <img src="/logo.jpg" alt="" className="rounded-full h-20"/>
+          <img src="/react/pizzeria_mammamia/public/logo.jpg" alt="" className="rounded-full h-20"/>
         </div>
 
         <div className="flex flex-col mx-6 text-white mb-4">
