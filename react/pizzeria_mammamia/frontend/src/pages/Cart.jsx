@@ -1,12 +1,22 @@
 import React from 'react'
-import { useState } from 'react'
-import articles from '../data/pizzas'
+import { useState, useEffect } from 'react'
 import { formatCurrency } from '../utils/formatCurrency'
 
 const Cart = () => {
 
+  const [ pizzas, setPizzas ] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/pizzas")
+    .then((res) => res.json())
+    .then((data) => {
+      setPizzas(data)
+      console.log(data)
+    })
+  }, [])
+  
   // simular un carrito inicial
-  const initialCart = articles.slice(0,6).map((pizza) => ({
+  const initialCart = pizzas.slice(0,6).map((pizza) => ({
     ...pizza,
      quantity: 1}))
 
