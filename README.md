@@ -1,4 +1,4 @@
-# IMPORTANTE: PARA EL DESAFIO 3 EL NAVBAR ESTÁ FUNCIONANDO CORRECTAMENTE, ASI QUE EL CARRITO SE REDIRECCIONA DESDE AHÍ
+# Cree un componente Pizzas.jsx que se rederiza justo debajo del componente CardPizza en el Home
 
 # Proyectos de Aprendizaje - Desafío LATAM
 
