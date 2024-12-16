@@ -1,8 +1,7 @@
 import Header from '../pages/components/Header'
 import CardPizza from '../components/CardPizza'
 import { useEffect, useState } from 'react'
-import Pizza from '../components/Pizza'
-
+import Pizza from './Pizza'
 
 const Home = () => {
 
@@ -25,7 +24,6 @@ const Home = () => {
       </div>
 
       <div className="grid grid-cols-1 grid-flow-row justify-items-center mx-auto md:mx-28 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 my-3 gap-3 mb-12">
-        <Pizza></Pizza>
       </div>
     </div>
   )

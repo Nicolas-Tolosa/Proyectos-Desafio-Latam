@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
     const navigate = useNavigate();
     const total = 25000;
-    const token = true;
+    const token = false;
 
     return (
         <div className="flex justify-between bg-slate-900 items-center px-2 py-3">
@@ -40,7 +40,7 @@ const Navbar = () => {
                                 <FaUser className="text-xs md:text-lg lg:text-lg xl:text-lg 2xl:text-lg" />
                                 <span className="text-xs md:text-lg lg:text-lg xl:text-lg 2xl:text-lg">Perfil</span>
                             </Link>
-                            <Link to="/logout" className="flex items-center space-x-1">
+                            <Link to="/" className="flex items-center space-x-1">
                                 <BiSolidLogOut className="text-xs md:text-lg lg:text-lg xl:text-lg 2xl:text-lg" />
                                 <span className="text-xs md:text-lg lg:text-lg xl:text-lg 2xl:text-lg">Logout</span>
                             </Link>
