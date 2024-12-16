@@ -1,5 +1,3 @@
-# Cree un componente Pizzas.jsx que se rederiza justo debajo del componente CardPizza en el Home
-
 # Proyectos de Aprendizaje - Desafío LATAM
 
 Este repositorio contiene los proyectos realizados durante mi formación en **Desafío LATAM**. Aquí almaceno mis avances y aprendizajes en diversas tecnologías y herramientas, especialmente en el módulo de **React**.
