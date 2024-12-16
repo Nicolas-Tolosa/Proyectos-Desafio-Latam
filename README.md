@@ -1,5 +1,3 @@
-# IMPORTANTE: PARA EL DESAFIO 3 EL NAVBAR ESTÁ FUNCIONANDO CORRECTAMENTE, ASI QUE EL CARRITO SE REDIRECCIONA DESDE AHÍ
-
 # Proyectos de Aprendizaje - Desafío LATAM
 
 Este repositorio contiene los proyectos realizados durante mi formación en **Desafío LATAM**. Aquí almaceno mis avances y aprendizajes en diversas tecnologías y herramientas, especialmente en el módulo de **React**.
